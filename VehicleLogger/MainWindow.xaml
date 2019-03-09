@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleLogger"
         mc:Ignorable="d"
-        Title="HelloWorld" Height="800" Width="1200" ResizeMode="NoResize">
+        Title="HelloWorld" Height="800" Width="1200" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Background="White">
-        <Frame Source="MainPage.xaml" NavigationUIVisibility="Hidden">
+        <Frame Source="/Pages/MainPage.xaml" NavigationUIVisibility="Hidden">
         </Frame>
         
 

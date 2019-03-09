@@ -13,10 +13,6 @@ D:\Projects\C#\VehicleLogger\VehicleLogger\obj\Debug\VehicleLogger.csproj.Genera
 D:\Projects\C#\VehicleLogger\VehicleLogger\obj\Debug\VehicleLogger.csproj.CoreCompileInputs.cache
 D:\Projects\C#\VehicleLogger\VehicleLogger\obj\Debug\VehicleLogger.exe
 D:\Projects\C#\VehicleLogger\VehicleLogger\obj\Debug\VehicleLogger.pdb
-D:\Projects\C#\VehicleLogger\VehicleLogger\obj\Debug\FuelPage.g.cs
-D:\Projects\C#\VehicleLogger\VehicleLogger\obj\Debug\MainPage.g.cs
-D:\Projects\C#\VehicleLogger\VehicleLogger\obj\Debug\FuelPage.baml
-D:\Projects\C#\VehicleLogger\VehicleLogger\obj\Debug\MainPage.baml
 D:\Projects\C#\VehicleLogger\VehicleLogger\obj\Debug\VehicleLogger_Content.g.cs
 D:\Projects\C#\VehicleLogger\VehicleLogger\bin\Debug\VehicleLoggerDB.db
 D:\Projects\C#\VehicleLogger\VehicleLogger\bin\Debug\Dapper.dll
@@ -25,3 +21,9 @@ D:\Projects\C#\VehicleLogger\VehicleLogger\bin\Debug\Dapper.xml
 D:\Projects\C#\VehicleLogger\VehicleLogger\bin\Debug\System.Data.SQLite.xml
 D:\Projects\C#\VehicleLogger\VehicleLogger\bin\Debug\System.Data.SQLite.dll.config
 D:\Projects\C#\VehicleLogger\VehicleLogger\obj\Debug\VehicleLogger.csproj.CopyComplete
+D:\Projects\C#\VehicleLogger\VehicleLogger\obj\Debug\Pages\FuelPage.g.cs
+D:\Projects\C#\VehicleLogger\VehicleLogger\obj\Debug\Pages\MainPage.g.cs
+D:\Projects\C#\VehicleLogger\VehicleLogger\obj\Debug\Pages\FuelPage.baml
+D:\Projects\C#\VehicleLogger\VehicleLogger\obj\Debug\Pages\MainPage.baml
+D:\Projects\C#\VehicleLogger\VehicleLogger\obj\Debug\Windows\NewVehicleWindow.g.cs
+D:\Projects\C#\VehicleLogger\VehicleLogger\obj\Debug\Windows\NewVehicleWindow.baml

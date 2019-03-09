@@ -1,0 +1,71 @@
+﻿<Window x:Class="VehicleLogger.Windows.NewVehicleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VehicleLogger.Windows"
+        mc:Ignorable="d"
+        Title="New Vehicle" Height="250" Width="375" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Border Padding="10" Background="#FF4D4D4D">
+        <StackPanel>
+
+            <!--Make / Model Section-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Margin="0 0 5 0">
+                    <TextBlock Foreground="White" FontSize="15">Make*</TextBlock>
+                    <TextBox Text="e.g. Volkswagen" Foreground="Gray" FontStyle="Italic"></TextBox>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Margin="5 0 0 0 ">
+                    <TextBlock Foreground="White" FontSize="15">Model*</TextBlock>
+                    <TextBox Text="e.g. Golf Mk3" Foreground="Gray" FontStyle="Italic"></TextBox>
+                </StackPanel>
+            </Grid>
+
+            <!--Engine Section-->
+            <TextBlock Foreground="White" FontSize="15">Engine</TextBlock>
+            <TextBox Text="e.g. AFT 1.6 74KW 101HP or 1600cc" Foreground="Gray" FontStyle="Italic"></TextBox>
+
+            <!--Fuel Section-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Margin="0 0 5 0">
+                    <TextBlock Foreground="White" FontSize="15">Fuel</TextBlock>
+                    <ComboBox>
+                        <ComboBoxItem>Petrol</ComboBoxItem>
+                        <ComboBoxItem>Diesel</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+                <!-- <StackPanel Grid.Column="1" Margin="5 0 0 0">
+                    <TextBlock>Color*</TextBlock>
+                    <TextBox Text="e.g. LB9A or White" Foreground="Gray" FontStyle="Italic"></TextBox>
+                </StackPanel>
+                -->
+
+
+
+            </Grid>
+
+            <!--Buttons-->
+            <StackPanel Margin="60 20">
+                <Button Margin="0 0 0 10" Foreground ="White" Background="#FFA43030">ADD</Button>
+                <Button Foreground ="White" Background="#FFA43030">CANCEL</Button>
+            </StackPanel>
+
+
+
+
+
+        </StackPanel>
+    </Border>
+</Window>

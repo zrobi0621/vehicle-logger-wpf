@@ -25,7 +25,7 @@ namespace VehicleLogger
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                cnn.Execute("INSERT INTO Vehicle (Brand, Type) VALUES (@Brand, @Type)", vehicle);
+                cnn.Execute("INSERT INTO Vehicle (Make, Model, Engine, Fuel) VALUES (@Make, @Model, @Engine, @Fuel)", vehicle);
             }
         }
 

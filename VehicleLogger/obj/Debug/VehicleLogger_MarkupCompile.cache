@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Projects\C#\VehicleLogger\VehicleLogger\App.xaml
-3-2118770487
+4-1747625063
 1261320960
-9-1118274909
+10660426262
 16195749230
-FuelPage.xaml;MainPage.xaml;MainWindow.xaml;
+Pages\FuelPage.xaml;Pages\MainPage.xaml;MainWindow.xaml;Windows\NewVehicleWindow.xaml;
 
 False
 
