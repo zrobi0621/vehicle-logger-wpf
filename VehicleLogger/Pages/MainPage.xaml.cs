@@ -27,13 +27,21 @@ namespace VehicleLogger
             LoadVehicleList();
         }
 
-        List<VehicleModel> vehicle = new List<VehicleModel>();
+        List<VehicleModel> vehicles = new List<VehicleModel>();
+
+        public delegate void RefreshList();
+        public event RefreshList RefreshListEvent;
 
         //Click Events
         private void AddNewVehicleButton(object sender, RoutedEventArgs e)
         {
-            NewVehicleWindow newVehWindow = new NewVehicleWindow();
-            newVehWindow.ShowDialog();
+
+            NewVehicleWindow newVehicleInstance = new NewVehicleWindow();
+            RefreshListEvent += new RefreshList(RefreshListView); // event initialization
+            newVehicleInstance.UpdateVehicles = RefreshListEvent; // assigning event to the Delegate
+            newVehicleInstance.ShowDialog();
+
+
         }
 
         private void FuelClick(object sender, RoutedEventArgs e)
@@ -68,13 +76,22 @@ namespace VehicleLogger
 
        //Functional Methods
 
-        private void LoadVehicleList()
+        public void LoadVehicleList()
         {
-            vehicle = SQLiteDataAccess.LoadVehicles();
-            VehiclesCB.ItemsSource = vehicle;
+            vehicles = SQLiteDataAccess.LoadVehicles();
+            VehiclesCB.ItemsSource = null;
+            VehiclesCB.ItemsSource = vehicles;
             VehiclesCB.SelectedIndex = 0;
         }
 
-        
+        private void RefreshListView()
+        {
+            vehicles = SQLiteDataAccess.LoadVehicles();
+            VehiclesCB.ItemsSource = null;
+            VehiclesCB.ItemsSource = vehicles;
+            VehiclesCB.SelectedIndex = 0;
+        }
+
+
     }
 }

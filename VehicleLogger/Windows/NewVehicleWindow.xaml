@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleLogger.Windows"
         mc:Ignorable="d"
-        Title="New Vehicle" Height="250" Width="375" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Add new vehicle" Height="275" Width="375" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
 
-    <Border Padding="10" Background="#FF4D4D4D">
+    <Border Padding="10" Background="#FF363636">
         <StackPanel>
 
             <!--Make / Model Section-->
@@ -19,18 +19,18 @@
 
                 <StackPanel Grid.Column="0" Margin="0 0 5 0">
                     <TextBlock Foreground="White" FontSize="15">Make*</TextBlock>
-                    <TextBox Text="e.g. Volkswagen" Foreground="Gray" FontStyle="Italic"></TextBox>
+                    <TextBox x:Name="MakeTextBox" Text="e.g. Volkswagen" Foreground="Gray" FontStyle="Italic" GotFocus="TextBox_GotFocus"></TextBox>
                 </StackPanel>
 
                 <StackPanel Grid.Column="1" Margin="5 0 0 0 ">
                     <TextBlock Foreground="White" FontSize="15">Model*</TextBlock>
-                    <TextBox Text="e.g. Golf Mk3" Foreground="Gray" FontStyle="Italic"></TextBox>
+                    <TextBox x:Name="ModelTextBox" Text="e.g. Golf Mk3" Foreground="Gray" FontStyle="Italic" GotFocus="TextBox_GotFocus"></TextBox>
                 </StackPanel>
             </Grid>
 
             <!--Engine Section-->
             <TextBlock Foreground="White" FontSize="15">Engine</TextBlock>
-            <TextBox Text="e.g. AFT 1.6 74KW 101HP or 1600cc" Foreground="Gray" FontStyle="Italic"></TextBox>
+            <TextBox x:Name="EngineTextBox" Text="e.g. AFT 1.6 74KW 101HP or 1600cc" Foreground="Gray" FontStyle="Italic" GotFocus="TextBox_GotFocus"></TextBox>
 
             <!--Fuel Section-->
             <Grid>
@@ -40,8 +40,8 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Grid.Column="0" Margin="0 0 5 0">
-                    <TextBlock Foreground="White" FontSize="15">Fuel</TextBlock>
-                    <ComboBox>
+                    <TextBlock Foreground="White" FontSize="15">Fuel*</TextBlock>
+                    <ComboBox x:Name="FuelComboBox" SelectedIndex="0">
                         <ComboBoxItem>Petrol</ComboBoxItem>
                         <ComboBoxItem>Diesel</ComboBoxItem>
                     </ComboBox>
@@ -57,9 +57,13 @@
             </Grid>
 
             <!--Buttons-->
-            <StackPanel Margin="60 20">
-                <Button Margin="0 0 0 10" Foreground ="White" Background="#FFA43030">ADD</Button>
-                <Button Foreground ="White" Background="#FFA43030">CANCEL</Button>
+            <StackPanel Margin="80 20">
+                <Border Background="#FF43AED0" Margin="0 0 0 10">
+                    <Button Margin="3" Foreground ="White" Background="#272727" Click="AddButton_Click">ADD</Button>
+                </Border>
+                <Border Background="#FF43AED0">
+                    <Button Margin="3" Foreground ="White" Background="#272727" Click="CancelButton_Click">CANCEL</Button>
+                </Border>
             </StackPanel>
 
 

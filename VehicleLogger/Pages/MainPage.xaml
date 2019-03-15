@@ -8,7 +8,7 @@
       d:DesignHeight="800" d:DesignWidth="1200"
       Title="MainPage">
     <Border Padding="10">
-        <Grid Background="#FF4D4D4D">
+        <Grid Background="#FF202430">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*"/>
@@ -22,20 +22,34 @@
             </Grid.RowDefinitions>
 
             <!--1st row-->
-            <TextBlock Foreground="White" FontSize="30" VerticalAlignment="Center" Margin="10 0 0 0">Vehicle:</TextBlock>
-            <ComboBox Name ="VehiclesCB" HorizontalAlignment="Left" Margin="126,20,0,19" VerticalAlignment="Center" Width="244" FontSize="18" Height="30"/>
-            <Button Foreground ="White" Background="#FFA43030" Grid.Row="0" Grid.Column="1" Margin="30,13,235,17"  FontSize="15" Click="AddNewVehicleButton">New</Button>
+            <TextBlock Foreground="White" FontSize="30" VerticalAlignment="Center" Margin="15 0 0 0">Vehicle:</TextBlock>
+            <ComboBox x:Name ="VehiclesCB" HorizontalAlignment="Left" Margin="126,20,0,19" VerticalAlignment="Center" Width="244" FontSize="18" Height="30"/>
+            <Border  Grid.Row="0" Grid.Column="1" Margin="10 10 270 10" Background="#FF43AED0">
+                <Button Foreground ="White" Background="#272727" Margin="5"  FontSize="20" FontWeight="Bold" Click="AddNewVehicleButton">New</Button>
+            </Border>
             <!--Big Buttons-->
-        
-            <Button Foreground ="White" Background="#FFA43030" Grid.Row="1" Grid.Column="0" Margin="30 40" FontSize="40" Click="FuelClick">FUEL</Button>
-            <Button Foreground ="White" Background="#FFA43030" Grid.Row="1" Grid.Column="1" Margin="30 40" FontSize="40" Click="CostsClick">COSTS</Button>
-            <Button Foreground ="White" Background="#FFA43030" Grid.Row="1" Grid.Column="2" Margin="30 40" FontSize="40" Click="CalendarClick">CALENDAR</Button>
-            <Button Foreground ="White" Background="#FFA43030" Grid.Row="2" Grid.Column="0" Margin="30 40" FontSize="40" Click="InformationClick">INFORMATION</Button>
-            <Button Foreground ="White" Background="#FFA43030" Grid.Row="2" Grid.Column="1" Margin="30 40" FontSize="40" Click="ReportsClick">REPORTS</Button>
-            <Button Foreground ="White" Background="#FFA43030" Grid.Row="2" Grid.Column="2" Margin="30 40" FontSize="40" Click="SettingsClick">SETTINGS</Button>
-        
+
+            <Border Grid.Row="1" Grid.Column="0" Margin="30 40" Background="#FF43AED0">
+                <Button Foreground ="White" Background="#272727" Margin="10" FontSize="40" FontWeight="Bold" Click="FuelClick">FUEL</Button>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="1" Margin="30 40" Background="#FF43AED0">
+                <Button Foreground ="White" Background="#272727" Margin="10" FontSize="40" FontWeight="Bold" Click="CostsClick">COSTS</Button>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="2" Margin="30 40" Background="#FF43AED0">
+                <Button Foreground ="White" Background="#272727" Margin="10" FontSize="40" FontWeight="Bold" Click="CalendarClick">CALENDAR</Button>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="0" Margin="30 40" Background="#FF43AED0">
+                <Button Foreground ="White" Background="#272727" Margin="10" FontSize="40" FontWeight="Bold" Click="InformationClick">INFORMATION</Button>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="1" Margin="30 40" Background="#FF43AED0">
+                <Button Foreground ="White" Background="#272727" Margin="10" FontSize="40" FontWeight="Bold" Click="ReportsClick">REPORTS</Button>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="2" Margin="30 40" Background="#FF43AED0">
+                <Button Foreground ="White" Background="#272727" Margin="10" FontSize="40" FontWeight="Bold" Click="SettingsClick">SETTINGS</Button>
+            </Border>
+
             <!--4th row-->
-            <TextBlock Grid.Column="2" Grid.Row="3" Foreground="White" FontSize="23" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 30 0">V0.1</TextBlock>
+            <TextBlock Grid.Column="2" Grid.Row="3" Foreground="White" FontSize="23" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 30 0">V0.1</TextBlock>
             
         </Grid>
     </Border>

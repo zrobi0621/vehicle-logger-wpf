@@ -11,7 +11,20 @@ namespace VehicleLogger
         public int Id { get; set; }
         public string Make { get; set; }
         public string Model { get; set; }
+        public string Engine { get; set; }
         public string Fuel { get; set; }
+
+        public VehicleModel()
+        {
+
+        }
+        public VehicleModel(string make, string model, string engine, string fuel)
+        {
+            this.Make = make;
+            this.Model = model;
+            this.Engine = engine;
+            this.Fuel = fuel;
+        }
 
         public override string ToString()
         {
