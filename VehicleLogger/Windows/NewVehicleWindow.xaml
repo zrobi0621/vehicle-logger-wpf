@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleLogger.Windows"
         mc:Ignorable="d"
-        Title="Add new vehicle" Height="275" Width="375" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Add new vehicle" Height="360" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
 
     <Border Padding="10" Background="#FF363636">
         <StackPanel>
@@ -18,19 +18,19 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Grid.Column="0" Margin="0 0 5 0">
-                    <TextBlock Foreground="White" FontSize="15">Make*</TextBlock>
-                    <TextBox x:Name="MakeTextBox" Text="e.g. Volkswagen" Foreground="Gray" FontStyle="Italic" GotFocus="TextBox_GotFocus"></TextBox>
+                    <TextBlock Foreground="White" FontSize="20">Make*</TextBlock>
+                    <TextBox x:Name="MakeTextBox" Text="e.g. Volkswagen" Foreground="Gray" FontStyle="Italic" GotFocus="TextBox_GotFocus" FontSize="20"></TextBox>
                 </StackPanel>
 
                 <StackPanel Grid.Column="1" Margin="5 0 0 0 ">
-                    <TextBlock Foreground="White" FontSize="15">Model*</TextBlock>
-                    <TextBox x:Name="ModelTextBox" Text="e.g. Golf Mk3" Foreground="Gray" FontStyle="Italic" GotFocus="TextBox_GotFocus"></TextBox>
+                    <TextBlock Foreground="White" FontSize="20">Model*</TextBlock>
+                    <TextBox x:Name="ModelTextBox" Text="e.g. Golf Mk3" Foreground="Gray" FontStyle="Italic" GotFocus="TextBox_GotFocus" FontSize="20"></TextBox>
                 </StackPanel>
             </Grid>
 
             <!--Engine Section-->
-            <TextBlock Foreground="White" FontSize="15">Engine</TextBlock>
-            <TextBox x:Name="EngineTextBox" Text="e.g. AFT 1.6 74KW 101HP or 1600cc" Foreground="Gray" FontStyle="Italic" GotFocus="TextBox_GotFocus"></TextBox>
+            <TextBlock Foreground="White" FontSize="20">Engine</TextBlock>
+            <TextBox x:Name="EngineTextBox" Text="e.g. AFT 1.6 74KW 101HP or 1600cc" Foreground="Gray" FontStyle="Italic" GotFocus="TextBox_GotFocus" FontSize="20"></TextBox>
 
             <!--Fuel Section-->
             <Grid>
@@ -40,8 +40,8 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Grid.Column="0" Margin="0 0 5 0">
-                    <TextBlock Foreground="White" FontSize="15">Fuel*</TextBlock>
-                    <ComboBox x:Name="FuelComboBox" SelectedIndex="0">
+                    <TextBlock Foreground="White" FontSize="20">Fuel*</TextBlock>
+                    <ComboBox x:Name="FuelComboBox" SelectedIndex="0" FontSize="20">
                         <ComboBoxItem>Petrol</ComboBoxItem>
                         <ComboBoxItem>Diesel</ComboBoxItem>
                     </ComboBox>
@@ -59,10 +59,10 @@
             <!--Buttons-->
             <StackPanel Margin="80 20">
                 <Border Background="#FF43AED0" Margin="0 0 0 10">
-                    <Button Margin="3" Foreground ="White" Background="#272727" Click="AddButton_Click">ADD</Button>
+                    <Button Margin="3" Foreground ="White" Background="#272727" Click="AddButton_Click" FontSize="20">ADD</Button>
                 </Border>
                 <Border Background="#FF43AED0">
-                    <Button Margin="3" Foreground ="White" Background="#272727" Click="CancelButton_Click">CANCEL</Button>
+                    <Button Margin="3" Foreground ="White" Background="#272727" Click="CancelButton_Click" FontSize="20">CANCEL</Button>
                 </Border>
             </StackPanel>
 

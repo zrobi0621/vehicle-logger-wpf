@@ -5,10 +5,54 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:VehicleLogger"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="800" d:DesignWidth="1200"
       Title="FuelPage">
 
-    <Grid Background="White">
-        
-    </Grid>
+    <Border Padding="10">
+        <Grid Background="#FF202430">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="10*" />
+            </Grid.RowDefinitions>
+
+            <Grid  Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock FontSize="30" Foreground="#FF43AED0" Margin="15 0 0 0">Car:</TextBlock>
+                    <TextBlock x:Name="carTextBlock" FontSize="30" Foreground="White" Margin="20 0 0 0">Volkswagen Golf Mk3</TextBlock>
+                </StackPanel>
+                <Border Grid.Column="1" Background="#FF43AED0" Margin="10">
+                     <Button Margin="7" Foreground ="White" Background="#272727" FontSize="22" Click="AddButton_Click">ADD</Button>
+                </Border>
+            </Grid>
+            <Grid  Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock FontSize="27" Foreground="White" Margin="15 0 0 0">Amount:</TextBlock>
+                    <TextBox x:Name="AmountTextBox" Width="70" Margin="15 2 0 2" FontSize="20" Text="e.g. 23" Foreground="Gray" FontStyle="Italic" GotFocus="TextBox_GotFocus"></TextBox>
+                    <TextBlock FontSize="27" Foreground="White" Margin="15 0 0 0">Cost:</TextBlock>
+                    <TextBox x:Name="CostTextBox" Width="90" Margin="15 2 0 2" FontSize="20" Text="e.g. 1800" Foreground="Gray" FontStyle="Italic" GotFocus="TextBox_GotFocus"></TextBox>
+                    <TextBlock FontSize="27" Foreground="White" Margin="15 0 0 0">Mileage:</TextBlock>
+                    <TextBox x:Name="MileageTextBox" Width="120" Margin="15 2 0 2" FontSize="20" Text="e.g. 275413" Foreground="Gray" FontStyle="Italic" GotFocus="TextBox_GotFocus"></TextBox>
+                    <TextBlock FontSize="27" Foreground="White" Margin="15 0 0 0">Date:</TextBlock>
+                    <TextBox x:Name="DateTextBox" Width="170" Margin="15 2 0 2" FontSize="20" Text="e.g. 2019-03-16" Foreground="Gray" FontStyle="Italic" GotFocus="TextBox_GotFocus"></TextBox>
+                </StackPanel>
+                
+                <Border Grid.Column="1" Background="#FF43AED0" Margin="10">
+                    <Button Margin="7" Foreground ="White" Background="#272727" FontSize="22" Click="BackButton_Click">BACK</Button>
+                </Border>
+
+            </Grid>
+            <DataGrid x:Name="FuelDataGrid" Grid.Row="2" ItemsSource="{Binding fuels}" Height="600" Width="1100" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FF363636" FontSize="23"/>
+            
+
+        </Grid>
+    </Border>
 </Page>

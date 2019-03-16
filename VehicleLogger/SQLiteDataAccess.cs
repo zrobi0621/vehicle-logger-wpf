@@ -17,7 +17,9 @@ namespace VehicleLogger
             return ConfigurationManager.ConnectionStrings[id].ConnectionString;
         }
 
-        public static List<VehicleModel> LoadVehicles()
+        //LOAD
+
+        public static List<VehicleModel>LoadVehicles()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
@@ -26,12 +28,26 @@ namespace VehicleLogger
             }
         }
 
+
+         public static List<FuelModel>LoadFuels()
+         {
+             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+             {
+                 var output = cnn.Query<FuelModel>("SELECT * FROM Fuel", new DynamicParameters());
+                 return output.ToList();
+             }
+         }
+
+        //ADD
+
         public static void AddVehicle(VehicleModel vehicle)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
                 cnn.Execute("INSERT INTO Vehicle (Make, Model, Engine, Fuel) VALUES (@Make, @Model, @Engine, @Fuel)", vehicle);
             }
-        }        
+        }
+
+
     }
 }

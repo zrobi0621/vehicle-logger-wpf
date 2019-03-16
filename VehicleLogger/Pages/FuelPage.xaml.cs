@@ -23,9 +23,37 @@ namespace VehicleLogger
         public FuelPage()
         {
             InitializeComponent();
+            RefreshDataGrid();
         }
 
+        List<FuelModel> fuels = new List<FuelModel>();
 
+        //Click events
 
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new MainPage());
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        //Functional Methods
+
+        public void RefreshDataGrid()
+        {
+            fuels = SQLiteDataAccess.LoadFuels();
+            FuelDataGrid.ItemsSource = null;
+            FuelDataGrid.ItemsSource = fuels;
+        }
+
+        public void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            tb.Text = string.Empty;
+            tb.GotFocus -= TextBox_GotFocus;
+        }
     }
 }

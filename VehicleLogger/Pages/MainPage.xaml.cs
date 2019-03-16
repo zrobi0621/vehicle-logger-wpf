@@ -37,10 +37,9 @@ namespace VehicleLogger
         {
 
             NewVehicleWindow newVehicleInstance = new NewVehicleWindow();
-            RefreshListEvent += new RefreshList(RefreshListView); // event initialization
+            RefreshListEvent += new RefreshList(LoadVehicleList); // event initialization
             newVehicleInstance.UpdateVehicles = RefreshListEvent; // assigning event to the Delegate
             newVehicleInstance.ShowDialog();
-
 
         }
 
@@ -79,19 +78,10 @@ namespace VehicleLogger
         public void LoadVehicleList()
         {
             vehicles = SQLiteDataAccess.LoadVehicles();
-            VehiclesCB.ItemsSource = null;
-            VehiclesCB.ItemsSource = vehicles;
-            VehiclesCB.SelectedIndex = 0;
+            VehiclesComboBox.ItemsSource = null;
+            VehiclesComboBox.ItemsSource = vehicles;
+            VehiclesComboBox.SelectedIndex = 0;
         }
-
-        private void RefreshListView()
-        {
-            vehicles = SQLiteDataAccess.LoadVehicles();
-            VehiclesCB.ItemsSource = null;
-            VehiclesCB.ItemsSource = vehicles;
-            VehiclesCB.SelectedIndex = 0;
-        }
-
 
     }
 }

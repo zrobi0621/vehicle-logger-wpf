@@ -18,12 +18,13 @@ namespace VehicleLogger
         {
 
         }
+
         public VehicleModel(string make, string model, string engine, string fuel)
         {
-            this.Make = make;
-            this.Model = model;
-            this.Engine = engine;
-            this.Fuel = fuel;
+            Make = make;
+            Model = model;
+            Engine = engine;
+            Fuel = fuel;
         }
 
         public override string ToString()

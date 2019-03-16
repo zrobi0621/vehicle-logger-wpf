@@ -23,7 +23,7 @@
 
             <!--1st row-->
             <TextBlock Foreground="White" FontSize="30" VerticalAlignment="Center" Margin="15 0 0 0">Vehicle:</TextBlock>
-            <ComboBox x:Name ="VehiclesCB" HorizontalAlignment="Left" Margin="126,20,0,19" VerticalAlignment="Center" Width="244" FontSize="18" Height="30"/>
+            <ComboBox x:Name ="VehiclesComboBox" HorizontalAlignment="Left" Margin="126,20,0,19" VerticalAlignment="Center" Width="244" FontSize="18" Height="30"/>
             <Border  Grid.Row="0" Grid.Column="1" Margin="10 10 270 10" Background="#FF43AED0">
                 <Button Foreground ="White" Background="#272727" Margin="5"  FontSize="20" FontWeight="Bold" Click="AddNewVehicleButton">New</Button>
             </Border>

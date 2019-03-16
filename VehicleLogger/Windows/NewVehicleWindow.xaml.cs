@@ -26,10 +26,7 @@ namespace VehicleLogger.Windows
 
         public Delegate UpdateVehicles;
 
-        private void CancelButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
+        //Click events     
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
@@ -47,9 +44,16 @@ namespace VehicleLogger.Windows
             SQLiteDataAccess.AddVehicle(newVehicle);
 
             // Perform save operation 
-            UpdateVehicles.DynamicInvoke(); //this will call the `RefreshListView` method of mainWindow
+            UpdateVehicles.DynamicInvoke(); //this will call the `LoadVehicleList` method of mainWindow
             this.Close();
         }
+
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        //Functional methods
 
         public void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {

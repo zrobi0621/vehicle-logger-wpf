@@ -64,6 +64,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="FuelModel.cs" />
     <Compile Include="SQLiteDataAccess.cs" />
     <Compile Include="VehicleModel.cs" />
     <Compile Include="Windows\NewVehicleWindow.xaml.cs">
